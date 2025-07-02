@@ -1,0 +1,335 @@
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srushti's Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f8ff;
+      color: black;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background: linear-gradient(to right, #831bcd, #f9620b);
+      color: white;
+      padding: 20px;
+    }
+
+    section {
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      max-width: 800px;
+      width: 90%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0077b5;
+      margin: auto;
+      display: block;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      color: black;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill:nth-child(1) { background-color: #FFDDC1; }
+    .skill:nth-child(2) { background-color: #D4E2D4; }
+    .skill:nth-child(3) { background-color: #BFD7ED; }
+    .skill:nth-child(4) { background-color: #FDE2E4; }
+    .skill:nth-child(5) { background-color: #FFF1C1; }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    input, textarea {
+      max-width: 400px;
+      padding: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #831bcd;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #6d14a5;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    body.dark-mode section {
+      background-color: #1e1e1e;
+    }
+
+    #darkModeToggle {
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    #modeIcon {
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    .tech-slider {
+      overflow: hidden;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .tech-icons-track {
+      display: flex;
+      gap: 40px;
+      animation: slideLeft 10s linear infinite;
+    }
+
+    .tech-icons-track i, .tech-icons-track span {
+      font-size: 40px;
+    }
+
+    @keyframes slideLeft {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .tech-icons-track > * {
+      flex: 0 0 auto;
+    }
+
+    .progress-container {
+      margin-top: 30px;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .progress-bar {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      height: 20px;
+    }
+
+    .progress-fill {
+      background: #f34b7d;
+      color: white;
+      padding: 0 10px;
+      font-size: 12px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 10px;
+    }
+
+    .social-icons {
+      font-size: 28px;
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      margin: 0 15px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My World!</h1>
+    <p>This is Srushti, a <span id="dynamic-text" style="font-weight:bold;"></span></p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hello, I'm Srushti, and here's a little information about me.</p>
+    <img class="profile-pic" src="C:\Users\Lenovo\Desktop\demo\c++\assets\img\Photo Srushti Boraste TE Ai-Ds.jpg" alt="Profile Picture">
+  </section>
+
+  <section>
+    <h2>Contact Information</h2>
+    <p>Let's Connect!</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/srushti-boraste-a69732298" target="_blank" style="color: #0077b5;">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:shrushtiboraste123@gmail.com" target="_blank" style="color: #d44638;">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </section>
+  
+
+  <hr>
+
+  <section>
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <span class="skill">Web Development</span>
+      <span class="skill">Graphic Design</span>
+      <span class="skill">Photography</span>
+      <span class="skill">AI & Machine Learning</span>
+      <span class="skill">Python</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technologies I Use</h2>
+    <div class="tech-slider">
+      <div class="tech-icons-track">
+        <i class="fab fa-react" style="color:#61DBFB;"></i>
+        <i class="fab fa-python" style="color:#306998;"></i>
+        <i class="fab fa-java" style="color:#f89820;"></i>
+        <span style="font-weight:bold; color:#00599C;">C</span>
+        <span style="font-weight:bold; color:#f34b7d;">C++</span>
+        <i class="fab fa-react" style="color:#61DBFB;"></i>
+        <i class="fab fa-python" style="color:#306998;"></i>
+        <i class="fab fa-java" style="color:#f89820;"></i>
+        <span style="font-weight:bold; color:#00599C;">C</span>
+        <span style="font-weight:bold; color:#f34b7d;">C++</span>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <h3>My Proficiency</h3>
+
+      <p>C</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 80%;">80%</div>
+      </div>
+
+      <p>Java</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 70%;">70%</div>
+      </div>
+
+      <p>Web Development</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 90%;">90%</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <div id="darkModeToggle">
+    <i id="modeIcon" class="fas fa-moon"></i>
+  </div>
+
+  <!-- Typing Effect -->
+  <script>
+    const textElement = document.getElementById('dynamic-text');
+    const phrases = ["Tech Enthusiast", "Data Analyst"];
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentPhrase = phrases[phraseIndex];
+      textElement.textContent = currentPhrase.substring(0, letterIndex);
+
+      if (!isDeleting) {
+        if (letterIndex < currentPhrase.length) {
+          letterIndex++;
+          setTimeout(typeEffect, 100);
+        } else {
+          isDeleting = true;
+          setTimeout(typeEffect, 1000);
+        }
+      } else {
+        if (letterIndex > 0) {
+          letterIndex--;
+          setTimeout(typeEffect, 50);
+        } else {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(typeEffect, 300);
+        }
+      }
+    }
+
+    typeEffect();
+  </script>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const modeIcon = document.getElementById('modeIcon');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') enableDark();
+    modeIcon.addEventListener('click', () => {
+      body.classList.contains('dark-mode') ? disableDark() : enableDark();
+    });
+
+    function enableDark() {
+      body.classList.add('dark-mode');
+      modeIcon.classList.remove('fa-moon');
+      modeIcon.classList.add('fa-sun');
+      localStorage.setItem('theme', 'dark');
+    }
+
+    function disableDark() {
+      body.classList.remove('dark-mode');
+      modeIcon.classList.remove('fa-sun');
+      modeIcon.classList.add('fa-moon');
+      localStorage.setItem('theme', 'light');
+    }
+  </script>
+
+</body>
+</html>
+
+
